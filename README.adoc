@@ -27,7 +27,7 @@ meteor npm install
 
 == Run
 
-Inside the project folder run the following commands:
+Inside the folder of your project run the following command:
 
 ```shell
 meteor npm start
