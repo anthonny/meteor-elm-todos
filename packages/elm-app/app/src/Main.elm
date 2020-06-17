@@ -196,16 +196,6 @@ isFilteredTodo filter todo =
             False
 
 
-toggleTodoStatus : TodoStatus -> TodoStatus
-toggleTodoStatus status =
-    case status of
-        Checked ->
-            Unchecked
-
-        Unchecked ->
-            Checked
-
-
 subscriptions : Model -> Sub Msg
 subscriptions _ =
     receiveTodos
