@@ -1,0 +1,34 @@
+= How I use Meteor, Elm and Tailwindcss together
+
+This repository contains the code built for the application TodoList I used in my blog post https://anthonnyquerouil.me/2020/06/17/how-i-use-meteor-elm-and-tailwindcss-together.html
+
+video::https://anthonnyquerouil.me/images/todo-elm-meteor.mp4[width="100%"]
+
+== Setup
+
+You need to install Meteor on your device.
+
+Here are the commands to install {url-meteor}[Meteor] on OSX/Linux and Windows
+OSX / Linux
+
+```shell
+# OSX/Linux
+curl https://install.meteor.com/ | sh
+
+# Windows
+choco install meteor
+```
+
+Then install the NPM dependencies:
+
+```shell
+meteor npm install
+```
+
+== Run
+
+Inside the project folder run the following commands:
+
+```shell
+meteor npm start
+```
