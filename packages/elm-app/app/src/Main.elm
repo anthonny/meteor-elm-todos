@@ -171,14 +171,6 @@ update msg model =
                 ( { model | todo = "" }, addTodo model.todo )
 
         ToggleStatus todoId ->
-            let
-                updateTodo todo =
-                    if todo.id == todoId then
-                        { todo | status = toggleTodoStatus todo.status }
-
-                    else
-                        todo
-            in
             ( model, toggleStatus todoId )
 
         FilterBy selectedFilter ->
