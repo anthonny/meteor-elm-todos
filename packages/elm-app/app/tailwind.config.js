@@ -1,8 +1,5 @@
 module.exports = {
-  purge: [],
-  theme: {
-    extend: {},
-  },
-  variants: {},
-  plugins: [],
-}
+    content: ["./src/**/*.elm", "./**/*.{js,ts}"],
+    variants: {},
+    plugins: [],
+};

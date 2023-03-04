@@ -1,5 +1,6 @@
-import "./main.scss";
-const { Elm } = require("./src/Main.elm");
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { Elm } from "./src/Main.elm";
 
 interface Flags {}
 

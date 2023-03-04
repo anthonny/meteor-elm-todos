@@ -52,7 +52,7 @@ init _ =
 
 view : Model -> Html Msg
 view model =
-    div [ class "w-screen h-screen flex justify-center items-center bg-gray-500 text-gray-800" ]
+    div [ class "w-screen h-screen flex justify-center items-center bg-gray-100 text-gray-800" ]
         [ div
             [ class "flex flex-col h-full"
             , style "width" "400px"
