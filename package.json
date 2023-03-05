@@ -1,14 +1,21 @@
 {
   "name": "meteor-elm-app-bare",
   "private": true,
+  "main": "packages/elm-app/dist/elm-app.js",
+  "targets": {
+    "main": {
+      "optimize": true
+    }
+  },
   "scripts": {
+    "build": "npm run elm:build && npm run css:build",
     "elm:build": "parcel build packages/elm-app/app/elm-app.ts --dist-dir packages/elm-app/dist --no-content-hash --no-cache",
     "elm:watch": "parcel watch packages/elm-app/app/elm-app.ts --dist-dir packages/elm-app/dist --no-content-hash",
-    "css": "cd ./packages/elm-app/app && npx tailwindcss -c ./tailwind.config.js -i main.css -o ../dist/elm-app.css",
-    "css:watch": "npm run css -- --watch",
+    "css:build": "cd ./packages/elm-app/app && npx tailwindcss -c ./tailwind.config.js -i main.css -o ../dist/elm-app.css",
+    "css:watch": "npm run css:build -- --watch",
     "meteor:run": "meteor run",
     "start": "rimraf \"./packages/elm-app/dist/*\" && concurrently -n \"parcel,css,meteor\" -c \"magenta,yellow,green\" \"meteor npm run elm:watch\" \"meteor npm run css:watch\" \"wait-on ./packages/elm-app/dist/elm-app.js && meteor npm run meteor:run\"",
-    "postinstall": "meteor npm run elm:build && meteor npm run css"
+    "postinstall": "meteor npm run build"
   },
   "meteor": {
     "mainModule": {
